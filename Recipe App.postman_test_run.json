@@ -1,0 +1,315 @@
+{
+	"id": "9b274ba2-c8c8-472e-9f9a-e0162831a239",
+	"name": "Recipe App",
+	"timestamp": "2023-10-21T05:02:38.515Z",
+	"collection_id": "25649291-e7de3274-f4c2-4b43-9397-de628682635c",
+	"folder_id": "25649291-590ce289-ee3e-445a-b1c8-91b542b82d72",
+	"environment_id": "0",
+	"totalPass": 7,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-10-21T05:02:35.590Z",
+	"totalFail": 9,
+	"results": [
+		{
+			"id": "2676b4e8-d1b5-42ed-947d-ca23b65359f8",
+			"name": "remove fv Item",
+			"url": "http://localhost:8090/favouriteItems/65322f673e0c0c185c5d22f2",
+			"time": 289,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				289
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5ccbc8d7-a795-4784-88e7-4013654deb7d",
+			"name": "Signup",
+			"url": "http://localhost:8090/user/signup",
+			"time": 307,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"signup": false,
+				"signin successful": false,
+				"user already exists": true
+			},
+			"testPassFailCounts": {
+				"signup": {
+					"pass": 0,
+					"fail": 1
+				},
+				"signin successful": {
+					"pass": 0,
+					"fail": 1
+				},
+				"user already exists": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				307
+			],
+			"allTests": [
+				{
+					"signup": false,
+					"signin successful": false,
+					"user already exists": true
+				}
+			]
+		},
+		{
+			"id": "14a86def-dba4-40ea-b6d5-81b96d8f0950",
+			"name": "SignIn",
+			"url": "http://localhost:8090/user/signin",
+			"time": 397,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"signin ": true,
+				"Invalid Credencials": false,
+				"User dosem't exist": false
+			},
+			"testPassFailCounts": {
+				"signin ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Invalid Credencials": {
+					"pass": 0,
+					"fail": 1
+				},
+				"User dosem't exist": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				397
+			],
+			"allTests": [
+				{
+					"signin ": true,
+					"Invalid Credencials": false,
+					"User dosem't exist": false
+				}
+			]
+		},
+		{
+			"id": "6197c758-18c9-4de9-8a98-f5941dc82418",
+			"name": "get all chatogories",
+			"url": "http://localhost:8090/recipes/categories",
+			"time": 521,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"categories Fetched": true,
+				"Error with fetching data": false
+			},
+			"testPassFailCounts": {
+				"categories Fetched": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error with fetching data": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				521
+			],
+			"allTests": [
+				{
+					"categories Fetched": true,
+					"Error with fetching data": false
+				}
+			]
+		},
+		{
+			"id": "c48cc542-952d-46b2-9cb0-c97db72e4670",
+			"name": "get meal by the chategories",
+			"url": "http://localhost:8090/recipes/categories/chicken",
+			"time": 200,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"fetch recipes by category": true
+			},
+			"testPassFailCounts": {
+				"fetch recipes by category": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				200
+			],
+			"allTests": [
+				{
+					"fetch recipes by category": true
+				}
+			]
+		},
+		{
+			"id": "ea88b834-66f7-47aa-9339-41b1db1d37d1",
+			"name": "add fav Items",
+			"url": "http://localhost:8090/favouriteItems/",
+			"time": 368,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Added to fav": false,
+				"fav item already exists": true,
+				"error": false
+			},
+			"testPassFailCounts": {
+				"Added to fav": {
+					"pass": 0,
+					"fail": 1
+				},
+				"fav item already exists": {
+					"pass": 1,
+					"fail": 0
+				},
+				"error": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				368
+			],
+			"allTests": [
+				{
+					"Added to fav": false,
+					"fav item already exists": true,
+					"error": false
+				}
+			]
+		},
+		{
+			"id": "41cd9c84-aa3e-4379-aac2-e1da866bcf6a",
+			"name": "Get fav Items",
+			"url": "http://localhost:8090/favouriteItems/652997edab3912b29b83297f",
+			"time": 287,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"fv items fetched": true,
+				"error": false
+			},
+			"testPassFailCounts": {
+				"fv items fetched": {
+					"pass": 1,
+					"fail": 0
+				},
+				"error": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				287
+			],
+			"allTests": [
+				{
+					"fv items fetched": true,
+					"error": false
+				}
+			]
+		},
+		{
+			"id": "0718897e-7f3d-4033-b6e8-b6acf42bd636",
+			"name": "get meal details",
+			"url": "http://localhost:8090/recipes/recipe/52772",
+			"time": 202,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"meal details fetched": true,
+				"data fetching error": false
+			},
+			"testPassFailCounts": {
+				"meal details fetched": {
+					"pass": 1,
+					"fail": 0
+				},
+				"data fetching error": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				202
+			],
+			"allTests": [
+				{
+					"meal details fetched": true,
+					"data fetching error": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2571,
+	"collection": {
+		"requests": [
+			{
+				"id": "2676b4e8-d1b5-42ed-947d-ca23b65359f8",
+				"method": "DELETE"
+			},
+			{
+				"id": "5ccbc8d7-a795-4784-88e7-4013654deb7d",
+				"method": "POST"
+			},
+			{
+				"id": "14a86def-dba4-40ea-b6d5-81b96d8f0950",
+				"method": "POST"
+			},
+			{
+				"id": "6197c758-18c9-4de9-8a98-f5941dc82418",
+				"method": "GET"
+			},
+			{
+				"id": "c48cc542-952d-46b2-9cb0-c97db72e4670",
+				"method": "GET"
+			},
+			{
+				"id": "ea88b834-66f7-47aa-9339-41b1db1d37d1",
+				"method": "POST"
+			},
+			{
+				"id": "41cd9c84-aa3e-4379-aac2-e1da866bcf6a",
+				"method": "GET"
+			},
+			{
+				"id": "0718897e-7f3d-4033-b6e8-b6acf42bd636",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -117,6 +117,7 @@ const ItemCartScreen = () => {
       <header className="header">
         <div className="cart-header">
           <h2 id="main-heding">Cook</h2>
+          <h2 className="user-greeting">Hello, {userFirstName}</h2>
           <div className="link-button">
             <br />
             <a href="/cart" className="header-button">
@@ -135,7 +136,6 @@ const ItemCartScreen = () => {
               height="24"
             />
           </a>
-          <h3 className="user-greeting">Hello, {userFirstName}</h3>
         </div>
       </header>
       <br />

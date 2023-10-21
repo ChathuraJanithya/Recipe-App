@@ -17,10 +17,6 @@ body {
   transition: color 0.3s;
   text-decoration: none;
 }
-.componentTop {
-  margin-left: 10%;
-  margin-top: 5%;
-}
 
 #main-heding {
   position: sticky;
@@ -48,7 +44,7 @@ body {
 }
 
 .link-button {
-  left: 50%;
+  left: 20%;
   top: 5.5%;
   transform: translate(-50%, -50%);
   padding: 8px;
@@ -125,7 +121,8 @@ body {
   display: flex;
 }
 .user-greeting {
-  margin-left: 10%;
+  align-items: center;
+  margin-left: 50px;
   font-size: 18px;
   font-weight: bold;
   color: #ff4a68;
