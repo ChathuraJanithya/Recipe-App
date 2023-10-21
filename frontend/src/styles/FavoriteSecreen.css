@@ -1,0 +1,126 @@
+body {
+  background-color: rgba(252, 199, 240, 0.204);
+}
+
+.cart-header {
+  position: fixed;
+  background-color: white;
+  display: flex;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-button:hover {
+  transform: scale(1.2);
+  color: black;
+  text-decoration: none;
+}
+
+#main-heding {
+  position: sticky;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 32px;
+  margin-left: 100px;
+}
+
+.header-button {
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.link-button {
+  left: 50%;
+  top: 5.5%;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  position: fixed;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+
+.item-type-bar {
+  display: flex;
+  margin-top: 4%;
+  margin-left: 6%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  z-index: 100;
+}
+
+.item-type-button-bar {
+  font-style: oblique;
+  padding: 15px;
+  border-radius: 50px;
+  border: 0.5px solid #ff4a68;
+  margin-left: 1%;
+  margin-top: 5%;
+  width: 150px;
+  background-color: #ffffff;
+  color: #ff4a68;
+  transition: 0.5s;
+}
+
+.item-type-button-bar:hover {
+  color: rgb(255, 255, 255);
+  transition: color 0.2s;
+  text-decoration: none;
+  background-color: #ff4a68;
+}
+
+.cart-content-div {
+  position: absolute;
+  margin: 6.5%;
+  margin-top: 9%;
+}
+
+.cart-item {
+  margin: 45px 25px;
+  float: left;
+  height: 200px;
+  width: 200px;
+  background-color: palevioletred;
+  border-radius: 42px;
+  padding: 5px;
+  box-shadow: 0 0 20px #00000071, 0 0 15px #0000007e,
+    2px 2px 10px rgba(0, 0, 0, 0.411), 0 0 15px rgba(0, 0, 0, 0.537);
+  transition: 0.25s;
+}
+
+.cart-item:hover {
+  box-shadow: 0 0 30px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffffbb,
+    0 0 10px #f7f7f7bb;
+}
+
+.logoicon {
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.item-lebel-name,
+.item-lebel-catagory {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 30px;
+  display: flex;
+}
+
+/* Styles for the favorite button */
+.favorite-button {
+  margin-top: -50px;
+  margin-left: 100px;
+  display: flex;
+  background: none;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+}
