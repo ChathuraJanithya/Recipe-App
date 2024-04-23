@@ -6,7 +6,7 @@ const SECRET_KEY = "RECIPEAPI";
 
 //existing User login
 const signup = async (req, res) => {
-  const { firstName, lastName, contact, email, password } = req.body;
+  const { name, nic, contact, email, password } = req.body;
   try {
     const existingUser = await User.findOne({ email: email });
     if (existingUser) {
@@ -16,8 +16,8 @@ const signup = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const result = await User.create({
-      firstName,
-      lastName,
+      name,
+      nic,
       contact,
       email,
       password: hashedPassword,
@@ -30,7 +30,14 @@ const signup = async (req, res) => {
         expiresIn: "1d",
       }
     );
-    res.status(201).json({ result, token });
+
+    const payload = {
+      token: token,
+      result: result,
+    };
+    res
+      .status(201)
+      .json({ message: "User created successfully", data: payload });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ message: "Something went wrong" });
