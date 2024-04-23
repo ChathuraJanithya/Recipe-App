@@ -49,14 +49,15 @@ const RegisterScreen = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:8090/user/signup", user);
+      const res = await axios.post(
+        "https://recipe-app-production-6f22.up.railway.app/",
+        user
+      );
       console.log(res);
       alert("User Registered Successfully");
       window.location = "/";
     } catch (err) {
-      if (err.response.status === 500) {
-        setErrorMessage("There was a problem with the server.");
-      }
+      console.error(err);
     }
   };
 

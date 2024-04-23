@@ -23,7 +23,7 @@ const ItemCartScreen = () => {
   // Fetch categories
   useEffect(() => {
     axios
-      .get("http://localhost:8090/recipes/categories")
+      .get("https://recipe-app-production-6f22.up.railway.app/categories")
       .then((response) => {
         if (Array.isArray(response.data.categories)) {
           setCategories(response.data.categories);

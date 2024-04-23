@@ -21,7 +21,7 @@ const FavouriteScreen = () => {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:8090/favouriteItems/${userId}`)
+        .get(`https://recipe-app-production-6f22.up.railway.app/${userId}`)
         .then((response) => {
           if (Array.isArray(response.data.favoriteRecipes)) {
             setFavoriteRecipes(response.data.favoriteRecipes);

@@ -24,8 +24,6 @@ app.use("/recipes", recipeRouter);
 import favouriteItemRouter from "./api/routes/favouriteItemRoute.js";
 app.use("/favouriteItems", favouriteItemRouter);
 
-/*----------------------- Chathura END ----------------------- */
-
 app.listen(PORT, () => {
   logger.info(`Server is up and running on ${PORT}`);
   connect();

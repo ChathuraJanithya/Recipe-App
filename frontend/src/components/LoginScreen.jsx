@@ -29,7 +29,10 @@ const LoginScreen = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:8090/user/signin", user);
+      const res = await axios.post(
+        "https://recipe-app-production-6f22.up.railway.app/",
+        user
+      );
       console.log(res);
       localStorage.setItem("authToken", res.data.token);
       localStorage.setItem("userData", JSON.stringify(res.data.result));
