@@ -30,7 +30,7 @@ const LoginScreen = () => {
 
     try {
       const res = await axios.post(
-        "https://recipe-app-production-6f22.up.railway.app/",
+        "https://recipe-app-production-6f22.up.railway.app/user/signin",
         user
       );
       console.log(res);

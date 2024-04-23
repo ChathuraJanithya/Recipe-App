@@ -23,7 +23,9 @@ const ItemCartScreen = () => {
   // Fetch categories
   useEffect(() => {
     axios
-      .get("https://recipe-app-production-6f22.up.railway.app/categories")
+      .get(
+        "https://recipe-app-production-6f22.up.railway.app/recipes/categories"
+      )
       .then((response) => {
         if (Array.isArray(response.data.categories)) {
           setCategories(response.data.categories);
@@ -43,7 +45,9 @@ const ItemCartScreen = () => {
   useEffect(() => {
     if (selectedCategory) {
       axios
-        .get(`http://localhost:8090/recipes/categories/${selectedCategory}`)
+        .get(
+          `https://recipe-app-production-6f22.up.railway.app/recipes/categories/${selectedCategory}`
+        )
         .then((response) => {
           if (Array.isArray(response.data.recipes)) {
             setRecipes(response.data.recipes);
@@ -78,7 +82,10 @@ const ItemCartScreen = () => {
       strMealThumb: recipe.strMealThumb,
     };
     axios
-      .post(`http://localhost:8090/favouriteItems/`, recipeData)
+      .post(
+        `https://recipe-app-production-6f22.up.railway.app/favouriteItems/`,
+        recipeData
+      )
       .then((response) => {
         console.log("response : ", response);
       })
@@ -93,7 +100,9 @@ const ItemCartScreen = () => {
   //view recipe
   const viewRecipe = (recipe) => {
     axios
-      .get(`http://localhost:8090/recipes/recipe/${recipe.idMeal}`)
+      .get(
+        `https://recipe-app-production-6f22.up.railway.app/recipes/recipe/${recipe.idMeal}`
+      )
       .then((response) => {
         if (response.data && response.data.recipe) {
           // Check if "recipe" property exists in the response data
